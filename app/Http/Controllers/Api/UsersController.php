@@ -47,12 +47,13 @@ class UsersController extends Controller
       } else {
          return response(["message" => "login filed", "success" => false], 400);
       }
+      
    }
 
 
    public function store(Request $request, Users $users)
    {
-//T7MR6LaKK2JgjLi
+      //T7MR6LaKK2JgjLi
       $inputs = $request->all();
       $isInUse = Users::where("email", $inputs['email'])->get();
       if ($isInUse->isEmpty()) {
