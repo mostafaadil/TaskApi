@@ -276,9 +276,33 @@
 				{
 					"name": "register",
 					"request": {
-						"method": "GET",
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
 						"header": [],
-						"url": null
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"adil harran\",\"email\":\"adil@sgmail.com\",\"password\":\"123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}users",
+							"host": [
+								"{{url}}users"
+							]
+						}
 					},
 					"response": []
 				}
@@ -308,7 +332,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "http://127.0.0.1:8000/api/"
+			"value": "http://taskapi.darelsaig.com/api/"
 		},
 		{
 			"key": "token",

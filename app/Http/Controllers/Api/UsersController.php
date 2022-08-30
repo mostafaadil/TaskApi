@@ -52,7 +52,7 @@ class UsersController extends Controller
 
    public function store(Request $request, Users $users)
    {
-
+//T7MR6LaKK2JgjLi
       $inputs = $request->all();
       $isInUse = Users::where("email", $inputs['email'])->get();
       if ($isInUse->isEmpty()) {
